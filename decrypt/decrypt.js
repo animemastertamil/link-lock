@@ -87,7 +87,10 @@ async function onDecrypt() {
         return;
     }
 
-    // Print the decrypted link to the output area
+    // Redirect the user to the decrypted URL
+    window.location.replace(decrypted);
+
+    // This part of the code will not be reached after the redirect
     document.querySelector("#output").value = decrypted;
     error("Decrypted!");
 
@@ -116,6 +119,6 @@ function onCopy(id) {
 function main() {
     if (window.location.hash) {
         document.querySelector("#encrypted-url").value =
-            `https://animastertamil.github.io/link-lock/${window.location.hash}`;
+            `https://animemastertamil.github.io/link-lock/${window.location.hash}`;
     }
 }
