@@ -97,9 +97,11 @@ try {
   if (params.unencrypted) {
     window.location.href = params.url;
   } else {
-    window.location.href = "https://jstrieb.github.io/link-lock/" + window.location.hash;
+    // Corrected fallback URL to your domain
+    window.location.href = "https://animastertamil.github.io/link-lock/" + window.location.hash;
   }
 } catch {
-  window.location.replace("https://gmail.com");
+  // Corrected fallback URL to a neutral page.
+  window.location.replace("https://animastertamil.github.io/link-lock/decrypt");
 }
 })();
