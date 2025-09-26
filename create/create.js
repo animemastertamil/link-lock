@@ -4,6 +4,7 @@
  */
 
 
+
 /*******************************************************************************
  * Helper Functions
  ******************************************************************************/
@@ -120,8 +121,8 @@ async function onEncrypt() {
 
     const encrypted = await generateFragment(url, password, hint, useRandomSalt,
         useRandomIv);
-    // Correctly set the output URL to use your GitHub Pages domain
-    const output = `https://animastertamil.github.io/link-lock/#${encrypted}`;
+    // Corrected the output URL to include the '/decrypt' path
+    const output = `https://animastertamil.github.io/link-lock/decrypt/#${encrypted}`;
 
     document.querySelector("#output").value = output;
     highlight("output");
