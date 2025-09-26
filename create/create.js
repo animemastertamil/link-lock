@@ -122,13 +122,13 @@ async function onEncrypt() {
     const encrypted = await generateFragment(url, password, hint, useRandomSalt,
         useRandomIv);
     // Corrected the output URL to include the '/decrypt' path
-    const output = `https://animastertamil.github.io/link-lock/decrypt/#${encrypted}`;
+    const output = `https://animemastertamil.github.io/link-lock/decrypt/#${encrypted}`;
 
     document.querySelector("#output").value = output;
     highlight("output");
 
     // Adjust "Hidden Bookmark" link to use your new domain
-    document.querySelector("#bookmark").href = `https://animastertamil.github.io/link-lock/hidden/#${encrypted}`;
+    document.querySelector("#bookmark").href = `https://animemastertamil.github.io/link-lock/hidden/#${encrypted}`;
 
     // Adjust "Open in New Tab" link
     document.querySelector("#open").href = output;
